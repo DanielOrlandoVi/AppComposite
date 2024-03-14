@@ -4,10 +4,13 @@
  */
 package ProductosConcretos;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author PERSONAL
  */
 public class Salida {
-    
+    public static void mostrarHelado(String descripcion, double precio) {
+        JOptionPane.showMessageDialog(null, descripcion + "\nPrecio: $" + precio);
+    }
 }
