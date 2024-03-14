@@ -6,7 +6,7 @@ import java.util.List;
 import Componente.ComponenteHelado;
 
 public class HeladoPersonalizado extends ComponenteHelado {
-    private List<Ingrediente> ingredientes;
+    private List<ComponenteHelado> ingredientes;
     private double precioBase = 0.0;
 
     public HeladoPersonalizado() {
@@ -14,14 +14,14 @@ public class HeladoPersonalizado extends ComponenteHelado {
         ingredientes = new ArrayList<>();
     }
 
-    public void agregarIngrediente(Ingrediente ingrediente) {
+    public void agregarIngrediente(ComponenteHelado ingrediente) {
         ingredientes.add(ingrediente);
     }
 
     @Override
     public double getPrecio() {
         double precioTotal = precioBase;
-        for (Ingrediente ingrediente : ingredientes) {
+        for (ComponenteHelado ingrediente : ingredientes) {
             precioTotal += ingrediente.getPrecio();
         }
         return precioTotal;
@@ -30,7 +30,7 @@ public class HeladoPersonalizado extends ComponenteHelado {
     @Override
     public String obtenerDescripcion() {
         StringBuilder descripcion = new StringBuilder(getNombre() + ":\n");
-        for (Ingrediente ingrediente : ingredientes) {
+        for (ComponenteHelado ingrediente : ingredientes) {
             descripcion.append("- ").append(ingrediente.obtenerDescripcion()).append("\n");
         }
         return descripcion.toString();
