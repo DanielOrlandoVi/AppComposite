@@ -6,6 +6,7 @@ public abstract class ComponenteHelado {
     private String descripcion;
 
     public ComponenteHelado(String nombre) {
+        super();
         this.nombre = nombre;
         this.descripcion = "";
     }

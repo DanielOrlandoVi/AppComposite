@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  * @author PERSONAL
  */
 public class Salida {
-    public static void mostrarHelado(String descripcion, double precio) {
-        JOptionPane.showMessageDialog(null, descripcion + "\nPrecio: $" + precio);
+    public static void mostrarHelado(String descripcion, double precio, int ciclo) {
+        JOptionPane.showMessageDialog(null, "Orden " + ciclo + ":\n" + descripcion + "\nPrecio: $" + precio);
     }
 }

@@ -8,7 +8,10 @@ import Componente.*;
 
 
 public class Main {
+    static int ciclo = 1;
     public static void main(String[] args) {
+
+        while(true){
         // Crear helado personalizado
         HeladoPersonalizado miHelado = new HeladoPersonalizado();
         miHelado.setPrecioBase(3.0); // Establecer precio base para el helado
@@ -44,8 +47,10 @@ public class Main {
         }
 
         // Mostrar descripción y precio del helado personalizado
-        Salida.mostrarHelado(miHelado.obtenerDescripcion(), miHelado.getPrecio());
+        Salida.mostrarHelado(miHelado.obtenerDescripcion(), miHelado.getPrecio(), ciclo);
+        ciclo += 1;
     }
+}
 
     private static double obtenerPrecioIngrediente(String seleccion) {
         switch (seleccion) {
